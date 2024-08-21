@@ -6,9 +6,14 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
+ 
+  {
+    path: 'lista-heroes',
+    loadChildren: () => import('./page/lista-heroes/lista-heroes.module').then( m => m.ListaHeroesPageModule)
+  },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'lista_heroes',
     pathMatch: 'full'
   },
 ];
